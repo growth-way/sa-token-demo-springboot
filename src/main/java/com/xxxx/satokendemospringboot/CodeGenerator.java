@@ -64,7 +64,7 @@ public class CodeGenerator {
 
 		// 数据源配置
 		DataSourceConfig dsc = new DataSourceConfig();
-		dsc.setUrl("jdbc:mysql://106.52.243.120:3306/crmms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia" +
+		dsc.setUrl("jdbc:mysql://106.52.243.120:3306/base?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia" +
 				"/Shanghai");
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
@@ -119,7 +119,7 @@ public class CodeGenerator {
 		//数据库表映射到实体的命名策略
 		strategy.setNaming(NamingStrategy.underline_to_camel);
 		//数据库表字段映射到实体的命名策略
-		strategy.setColumnNaming(NamingStrategy.no_change);
+		strategy.setColumnNaming(NamingStrategy.underline_to_camel);
 		//lombok模型
 		strategy.setEntityLombokModel(true);
 		//生成 @RestController 控制器

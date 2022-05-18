@@ -5,7 +5,7 @@ spring:
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://106.52.243.120:3306/crmms?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://106.52.243.120:3306/base?useUnicode=true&characterEncoding=UTF8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: acdegiafec6
     hikari:
@@ -33,7 +33,7 @@ mybatis-plus:
   type-aliases-package: com.xxxx.satokendemospringboot.pojo
   configuration:
     # 自动驼峰命名
-    map-underscore-to-camel-case: false
+    map-underscore-to-camel-case: true
 
 # Sa-Token配置
 sa-token:

@@ -5,6 +5,7 @@ import cn.dev33.satoken.util.SaResult;
 import com.xxxx.satokendemospringboot.base.ResInfo;
 import com.xxxx.satokendemospringboot.pojo.UserLoginParam;
 import com.xxxx.satokendemospringboot.service.IUserService;
+import com.xxxx.satokendemospringboot.service.impl.UserServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,7 +19,7 @@ import javax.validation.Valid;
 @CrossOrigin
 public class LoginController {
     @Resource
-    private IUserService userService;
+    private UserServiceImpl userService;
     /**
      * 用户登录
      * @param userLoginParam
